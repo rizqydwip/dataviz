@@ -19,16 +19,25 @@ Sebelum melakukan pembuatan grafik, Anda harus terlebih dahulu mengetahui inform
 
 ```{r explore-iris1}
 iris # mencetak data di konsol
-dim(iris) # ___
-str(iris) # ___
-colnames(iris) # ___
-head(iris) # ___
-tail(iris) # ___
-summary(iris) # ___
+dim(iris) # melihat dimensi 
+help(dim)
+
+str(iris) # melihat struktur
+help(str)
+
+colnames(iris) # melihat isi dari row dan column
+help(colnames)
+
+head(iris) # melihat 5 data teratas
+tail(iris) # melihat 5 data terbawah
+
+summary(iris) # melihat ringkasan statistik
+
 iris$Sepal.Length # ekstraksi kolom 'Sepal.Length' dari dataset iris. Jalankan help(`[`) untuk membaca dokumentasi
-class(iris$Species) # ___
-length(iris$Petal.Width) # ___
-levels(iris$Species) # ___
+
+class(iris$Species) # melihat class
+length(iris$Petal.Width) # melihat length dari objek
+levels(iris$Species) # melihat level atribut dari variabel
 length(levels(iris$Species)) # ___
 unique(iris$Species) # ___
 length(unique(iris$Species)) # ___
@@ -56,7 +65,7 @@ skim(typical_data)
 Aktivitas pembuatan grafik tidak dapat dilepaskan dari aktivitas transformasi data. Salah satu paket yang umum digunakan untuk melakukan transformasi data adalah dplyr. Sekarang aktifkanlah paket tersebut dengan cara mengganti bagian ___ dengan jawaban yang tepat! (Catatan: jika Anda belum memasang paket dplyr, pasanglah paket tersebut terlebih dahulu melalui menu **Tools -- Install Packages...**)
 
 ```{r load-package}
-library(___)
+library(dplyr)
 ```
 
 Terdapat beberapa fungsi utama dari paket dplyr untuk melakukan transformasi data, diantaranya:
@@ -98,10 +107,10 @@ identical(storms_nopipe, storms_pipe) # membandingkan dua dataset, hasilnya TRUE
 
 Buatlah rangkuman tahapan-tahapan apa yang dilakukan untuk melakukan transformasi dataset storms diatas!
 
-1. ___
-2. ___
-3. ___
-4. ___
-5. ___
+1. select
+2. filter
+3. mutate
+4. group_by
+5. summarise
 
 Sekarang Anda dipersilahkan klik tombol **Knit** atau menjalankan pemintas **Ctrl + Shift + K** untuk mengkonversi dokumen R Markdown ini menjadi dokumen final (dokumen berekstensi .md). Kemudian silakan unggah hasil kerja Anda ke repositori GitHub dengan cara yang telah ditunjukan oleh instruktur. Setelah berhasil, silakan akses berkas 002_eksplor-transform.md dalam direktori vignettes di repositori GitHub milik Anda tersebut.
